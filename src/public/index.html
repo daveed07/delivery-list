@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Lista de Joycons</title>
+  </head>
+  <body>
+    <aside class="aside">
+      <h1 class="title">Lista de Domicilios</h1>
+      <section class="container">
+        <h2 class="subtitle">Agregar</h2>
+        <div class="input-container first-container">
+          <input type="text" id="name" class="input" placeholder="Nombre">
+          <input type="number" id="phone" class="input" placeholder="Telefono">
+          <input type="date" id="date" class="input">
+        </div>
+        <div class="input-container first-container">
+          <select id="type" class="select">
+            <option value="entrega">Entrega</option>
+            <option value="retiro">Retiro</option>
+          </select>
+          <select id="item" class="select">
+            <option value="producto">Producto</option>
+            <option value="reparacion">Reparación</option>
+          </select>
+          <select id="state" class="select">
+            <option value="pendiente">Pendiente</option>
+            <option value="entregado">Entregado</option>
+          </select>
+        </div>
+        <div class="input-container first-container">
+          <input type="number" id="guide" class="input" placeholder="Numero de guía">
+          <textarea id="notes" class="textarea input" cols="30" rows="4" placeholder="Notas"></textarea>
+          <input id="submit" class="input submit" type="submit" value="Enviar">
+        </div>
+      </section>
+      <section class="container">
+        <h2 class="subtitle">Editar</h2>
+        <div class="input-container second-container">
+          <input type="number" id="id" class="input" placeholder="Id">
+          <input type="text" id="name-edit" class="input" placeholder="Nombre">
+          <input type="text" id="phone-edit" class="input" placeholder="Telefono">
+          <input type="date" id="date-edit" class="input">
+        </div>
+        <div class="input-container first-container">
+          <select id="type-edit" class="select">
+            <option value="entrega">Entrega</option>
+            <option value="retiro">Retiro</option>
+          </select>
+          <select id="item-edit" class="select">
+            <option value="producto">Producto</option>
+            <option value="reparacion">Reparación</option>
+          </select>
+          <select id="state-edit" class="select">
+            <option value="pendiente">Pendiente</option>
+            <option value="entregado">Entregado</option>
+          </select>
+        </div>
+        <div class="input-container first-container">
+          <input type="number" id="guide-edit" class="input" placeholder="Numero de guía">
+          <textarea id="notes-edit" class="textarea input" cols="30" rows="4" placeholder="Notas"></textarea>
+          <input id="edit" class="input submit" type="submit" value="Editar">
+        </div>
+      </section>
+      <section class="container">
+        <h2 class="subtitle">Buscar</h2>
+        <div class="input-container third-container">
+          <input type="search" id="search" class="input">
+          <input id="search-submit" class="input submit"  type="submit" value="Buscar">
+        </div>
+      </section>
+    </aside>
+    <main class="main">
+      <p id="showData"></p>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./tableRender.js"></script>
+  </body>
+</html>
